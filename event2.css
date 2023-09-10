@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body , html{
+    overflow-x: hidden;
+}
+
+/* navbar */
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: sticky;
+    width: 100%;
+    background-color: #e0bbe4;
+}
+header .logo{
+    width: 10%;
+    float: left;
+    padding-left: 1%;
+}
+
+header .logo img{
+    width: 100%;
+}
+
+header ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    transition: all 0.2s ease-out;
+    width: 80%;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium',sans-serif;
+    text-align: center;
+    color: purple;  
+    transition: all 0.2s ease-out;
+    font-size: clamp(15px,1.8vw,300px);
+}
+
+header ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: purple;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease;
+}
+
+header ul li a:hover{
+  color: #957dad;
+}
+
+header ul li:hover:after{
+  width: 100%;
+}
+
+@media (max-width:800px){
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .logo{
+      width: 50%;
+    }
+    header .logo img{
+      width: 100%;
+      height: 25vh;
+    }
+    header ul{
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        
+    }
+    header ul li a{
+      padding-top: 2%;
+      padding-bottom: 2%;
+      display: block;
+    }
+}
+
+@media (max-width:400px){
+  header .logo{
+    width: 50%;
+  }
+  header .logo img{
+    width: 100%;
+    height: 20vh;
+  }
+}
+
+/* wedding title */
+
+.eventheader{
+    width: 100vw;
+    height: 100vh;
+    background-image:  linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,1)) , url(./weddingimg3.jpg);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventheadercontent{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+    animation-name: colorchange;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+/* animation */
+@keyframes colorchange{
+   0%{color: whitesmoke;}
+   25%{color: #ffefff;}
+   50%{color: #e9d3ff;}
+   75%{color: #cdb7f6;}
+   100%{color: #b19cd9;}
+}
+.eventheadercontent h2{
+    font-size: 4vmin;
+    /* font-size: 30px; */
+}
+
+.line{
+    width: 150px;
+    height: 4px;
+    background: #d90166;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.eventheadercontent h1{
+    font-size: 7vmin;
+    /* font-size: 50px; */
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* plan your wedding */
+
+.plansection{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.eventtitle{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(73,73,126);
+}
+
+.planrow{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    /* background: ; */
+    padding-left: 4%;
+}
+
+.planrow .plancolumn{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.plansection .planrow{
+    margin-top: 50px;
+}
+
+h4{
+    font-size: 3vmin;
+    color: #484872;
+    margin: 20px auto;
+}
+
+p{
+    color: #7c7c7c;
+    padding: 0px 40px;
+    font-size: 2.8vmin;
+}
+
+.eventcover{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,1)) , url(weddingcover2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.eventcovercontent{
+    width: 50%;
+    padding: 50px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eventcovercontent h1{
+    font-size: 7vmin;
+    margin: 50px;
+    font-weight: 600;
+}
+
+.eventcovercontent p{
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width:800px){
+    .planrow{
+        flex-direction: column;
+    }
+
+    .planrow .plancolumn{
+        margin: 20px auto;
+    }
+    .plancolumn img{
+        max-width: 90%;
+    }
+    .eventcovercontent{
+        width: 100%;
+    }
+    .eventtitle h1{
+        font-size: 5vmin;
+    }
+    .plancolumn,.contentcolumn h4{
+        font-size: 4vmin;
+    }
+    
+}
+
+
+/* tiles */
+
+.tilescontent{
+    margin-bottom: 2%;
+}
+
+.tilescontent .planrow .plancolumn{
+    width: 50%;
+}
+
+.tilescontent .imagecolumn{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.imagecolumn img{
+    max-width: 300px;
+    margin: 8px;
+}
+
+.contentcolumn h1{
+    color: #484872;
+    font-size: 6vmin;
+}
+
+.contentcolumn .line{
+    margin-left: -1px;
+    width: 73%;
+}
+
+.contentcolumn p{
+    pad: 0;
+    margin: 30px auto;
+}
+
+img{
+    transition: transform 0.3s ease;
+}
+
+img:hover{
+    transform: scale(1.08);
+}
+
+@media (max-width:800px){
+    .planrow{
+        flex-direction: column;
+    }
+    .tilescontent.planrow .plancolumn{
+        width: 100%;
+        margin: 20px auto;
+    }
+    .plancolumn img{
+        max-width: 90%;
+    }
+    .imagecolumn{
+        justify-content: center;
+        align-items: center;
+    }
+    .imagecolumn img{
+        width: 90%;
+    }
+}
+
+/* @media (max-width: 800px) {
+    .tilescontent .planrow .plancolumn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .planrow {
+        flex-direction: column;
+    }
+    .planrow .plancolumn {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 800px) {
+    header .logo {
+        width: 50%;
+    }
+    header .logo img {
+        width: 100%;
+        height: auto;
+    }
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    header ul li a {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+} */
+
+/* footer */
+
+footer{
+    width: 100%;
+    /* position: fixed; */
+    margin-top: auto;
+    bottom: 0;
+    background-color:  #32174d;
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.footerrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footercolumn{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+/* #footerlogo{ 
+    width: 80px;
+    margin-bottom: 30px;
+} */
+
+.footercolumn h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.footerlinks{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer li{
+    list-style: none;
+}
+
+.followus .socialmedia{  
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    /* width: auto; 
+    height: auto;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 15px;
+    position: absolute;
+    flex: 1; 
+    flex-direction: column;
+    float: right;  */
+} 
+
+/* @media (max-width: 800px) {
+    footer {
+        padding: 50px 0 10px;
+    }
+    .footercolumn {
+        flex-basis: 50%;
+        padding: 10px;
+    }
+    .followus {
+        text-align: center;
+    }
+    .followus .socialmedia {
+        margin-right: 0;
+    }
+} */
