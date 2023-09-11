@@ -6,6 +6,8 @@
     padding: 0;
     margin: 0;
 }
+
+/* header */
 header{
     display: flex;
     flex-direction: row;
@@ -280,8 +282,6 @@ h3{
     background: rgba(245, 197, 5, 0.5);
 }
 
-/* rgba(226,0,0,0.7); */
-
 .layer h3{
     width: 100%;
     font-weight: 500;
@@ -311,7 +311,6 @@ h3{
 
 .facilities-col{
     flex-basis: 31%;
-    /* flex-basis: 44%; */
     border-radius: 10px;
     margin-bottom: 5%;
     text-align: justify;
@@ -382,7 +381,6 @@ h3{
     width: auto;
     height: 100vh;
     background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(./roomspagenew.jpg);
-    /* background-image: url(./roomspagenew.jpg); */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -403,9 +401,7 @@ h3{
     .type{
         border: 2px solid var(--maincolor);
         padding: 10px;
-        /* font-size: 30px; */
         height: 700px;
-        /* align-content: center; */
     }
     
     .type img{
@@ -416,7 +412,6 @@ h3{
     .type h1{
         text-align: center;
         font-size: 2rem;
-        /* font-weight: 300; */
     }
     
     .type p{
@@ -458,7 +453,6 @@ h3{
     width: auto;
     height: 100vh;
     background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(./branchesmainimg.jpg);
-    /* background-image: url(./branchesmainimg.jpg); */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -562,9 +556,6 @@ table {
   }
 
 
-  
-
-
 /* dining page */
 
 
@@ -572,7 +563,6 @@ table {
     width: auto;
     height: 100vh;
     background-image: linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(./diningpage2.jpg);
-    /* background-image: url(./diningpage.jpg); */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -581,9 +571,6 @@ table {
 
 .diningmaintopic{
     margin: 5%;
-    /* align-content: center; */
-    /* justify-content: center; */
-    /* width: 100%; */
     text-align: center;
     padding-top: 1%;
 }
@@ -595,7 +582,6 @@ table {
     align-items: center;
     justify-content: center;
     background-color: #fddcc356;
-    /* margin-top: 4%; */
 }
 
 .dine{
@@ -967,6 +953,8 @@ input[type=text], select, textarea {
     padding-top: 5%;
     padding-bottom: 5%;
 }
+
+/* bookings form */
 .form{
     width: 650px;
 }
@@ -1100,7 +1088,6 @@ input[type=text], select, textarea {
     display: grid;
     width: 80%;
     grid-gap: 6rem;
-    /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
     grid-template-columns: auto auto;
     align-items: start;
 }
@@ -1140,8 +1127,6 @@ input[type=text], select, textarea {
 
 .adventuretext{
     font-size: 1.6rem;
-    /* letter-spacing: 0.1rem; */
-    /* line-height: 1.7; */
     color: black;
     font-weight: 500;
     margin-bottom: 2.5rem;
@@ -1256,11 +1241,8 @@ input[type=text], select, textarea {
 
 /* footer */
 
-/* footer */
-
 footer{
     width: 100%;
-    /* position: fixed; */
     margin-top: auto;
     bottom: 0;
     background-color: black;
@@ -1284,11 +1266,6 @@ footer{
     flex-basis: 25%;
     padding: 10px;
 }
-
-/* #footerlogo{ 
-    width: 80px;
-    margin-bottom: 30px;
-} */
 
 .footercolumn h3{
     width: fit-content;
@@ -1316,14 +1293,5 @@ footer li{
     font-size: 20px;
     cursor: pointer;
     color: #fff;
-    /* width: auto; 
-    height: auto;
-    border-radius: 50%;
-    text-align: center;
-    margin-right: 15px;
-    position: absolute;
-    flex: 1; 
-    flex-direction: column;
-    float: right;  */
 } 
 
